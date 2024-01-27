@@ -1,4 +1,4 @@
-fs = require("fs");
+const fs = require('fs')
 const https = require("https");
 process = require("process");
 require("dotenv").config();
@@ -94,7 +94,7 @@ if (USE_GITHUB_DATA === "true") {
   req.end();
 }
 
-if (MEDIUM_USERNAME !== undefined) {
+if (MEDIUM_USERNAME !== "bleh") {
   console.log(`Fetching Medium blogs data for ${MEDIUM_USERNAME}`);
   const options = {
     hostname: "api.rss2json.com",
